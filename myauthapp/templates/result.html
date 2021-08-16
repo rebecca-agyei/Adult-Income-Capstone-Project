@@ -1,0 +1,20 @@
+{% load static %} 
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />    
+    <link rel="stylesheet" type="text/css" href="{% static 'myauthapp/style.css' %}" />
+    <title>{% block title %}Prediction Result{% endblock %}</title>
+  </head>
+  <body>
+    {% block content %}
+      <a href="{% url 'home' %}">Home</a> <br><br><br>
+      <span>{{result}}</span>    
+    
+    {% endblock %}
+  </body>
+</html>
